@@ -1,0 +1,25 @@
+/*   
+Theme Name: ALAPTOPLIVING
+Description: This theme is built for AlapTopLiving.com by 1MANDEV. Please DON'T deactivated or delete this theme unless you are the developer of the Website. Proceed with Caution.
+Author: 1MANDEV
+Author URI: https://1mandev.com
+Version: 1.0
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: malina
+Tags: white, black, blue, fluid-layout, fixed-layout, custom-colors, custom-background, theme-options, translation-ready
+*/
+
+// Color Schemes
+:root {
+  --c-main: #41a000;
+  --c-main-light: #72c94a;
+  --c-sub: #1d4354;
+  --c-sub-light: #336278;
+  --c-light: #f9f9f9;
+  --c-shadow: #c9c9c9;
+  --c-shadow-footer: #33627825;
+  --c-shadow-light: #ddd;
+  --c-dark: #555;
+  --c-text: #333;
+}
