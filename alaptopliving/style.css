@@ -1,13 +1,12 @@
 /*   
 Theme Name: ALAPTOPLIVING
-Description: This theme is built for AlapTopLiving.com by 1MANDEV. Please DON'T deactivated or delete this theme unless you are the developer of the Website. Proceed with Caution.
+Description: This theme is built for alaptopliving.com by 1MANDEV. Please DON'T deactivated or delete this theme unless you are the developer of the Website. ⚠️ Proceed with Caution.
 Author: 1MANDEV
 Author URI: https://1mandev.com
 Version: 1.0
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Template: malina
-Tags: white, black, blue, fluid-layout, fixed-layout, custom-colors, custom-background, theme-options, translation-ready
 */
 
 // Color Schemes
@@ -22,4 +21,153 @@ Tags: white, black, blue, fluid-layout, fixed-layout, custom-colors, custom-back
   --c-shadow-light: #ddd;
   --c-dark: #555;
   --c-text: #333;
+}
+
+/*******************************
+* => Header Styles
+********************************/
+#header .social-icons li > a > i {
+  font-size: 18px;
+}
+
+#mobile-header .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.header-top .socials-block {
+  width: 25% !important;
+}
+
+@media screen and (max-width: 850px) {
+  #header .social-icons li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header#mobile-header .search-link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #mobile-header .logo img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/*******************************
+* => Footer Styles
+********************************/
+.sticky .title h2 {
+  line-height: 1.1;
+}
+.sticky .title h2 a {
+  font-size: 26px;
+  letter-spacing: 0;
+}
+.post-content-side {
+  text-align: left;
+}
+
+.post-meta .post-more a > i {
+  color: #41a000;
+}
+
+#pagination span,
+#pagination a {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#page-wrap-blog {
+  padding-top: 0;
+}
+.single-post .post #comments {
+  padding-top: 0;
+  border: none;
+}
+
+/*******************************
+* => Footer Styles
+********************************/
+
+#footer {
+  z-index: -111;
+  position: relative;
+  padding: 0;
+}
+
+#footer .social-icons span {
+  display: none !important;
+}
+
+#footer .social-icons li a > i {
+  font-size: 20px;
+  color: #72c94a;
+}
+
+.footer-layout-4#footer-copy-block {
+  background-color: #336278;
+  padding: 15px 0;
+}
+
+.footer-menu-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#footer #footer-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright-text {
+  color: #eee;
+}
+.copyright-text a {
+  color: #72c94a;
+}
+
+#footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 850px) {
+  #footer .container {
+    flex-direction: column;
+  }
+  #footer #footer-widgets {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  .widget.widget_nav_menu:first-child {
+    margin-right: 50px;
+    margin-bottom: 35px;
+  }
+
+  .footer-menu-text {
+    display: none;
+  }
+}
+
+/*******************************
+* => Modifying Styles
+********************************/
+
+#navigation-block .search-link {
+  display: none;
+}
+
+#back-to-top a {
+  background-color: #72c94a;
 }
