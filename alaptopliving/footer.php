@@ -1,3 +1,9 @@
+<?php 
+	$title = wp_title('', false); 
+	if ( $title == "" ) {
+		get_template_part( 'template-parts/footer', 'c2a' );
+	} 
+?>
 	<footer id="footer" class="footer-layout-4">
 	<?php if( get_theme_mod('malina_footer_copyright', '') != '' || get_theme_mod('malina_footer_socials', true) ) { ?>
 		<div class="container">
