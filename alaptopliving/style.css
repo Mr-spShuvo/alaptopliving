@@ -23,9 +23,32 @@ Template: malina
   --c-text: #333;
 }
 
+@keyframes spread {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
 /*******************************
 * => Header Styles
 ********************************/
+#header .logo {
+  width: 100px;
+  padding: 15px 0;
+  text-align: center;
+}
+
 #header .social-icons li > a > i {
   font-size: 18px;
 }
@@ -56,6 +79,180 @@ Template: malina
     width: 70px;
     height: 70px;
   }
+}
+
+/*******************************
+* => Hero Styles
+********************************/
+
+.header-hero {
+  background: #f7fff3;
+  text-align: center;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header-hero__title {
+  padding: 30px 0;
+  font-size: 32px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.header-hero__video {
+  position: relative;
+  z-index: 1;
+}
+
+.header-hero__loader {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  z-index: 11;
+  display: none;
+}
+
+.header-hero__loader img {
+  width: 100px;
+}
+
+.header-hero__placeholder {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-hero__play {
+  cursor: pointer;
+  position: absolute;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  border: none;
+  top: 35%;
+  transform: translate(-50%);
+  z-index: 111;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.header-hero__play::before {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -2px;
+  top: -3px;
+  z-index: -1;
+  background-color: #fff;
+  animation: spread 3s ease-in-out infinite alternate-reverse;
+}
+
+.header-hero__play::after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -2px;
+  top: -3px;
+  z-index: -1;
+  background-color: #fff;
+  animation: spread 6s ease-in-out infinite reverse;
+}
+
+.header-hero__placeholder::after {
+  content: '';
+  height: 328px;
+  width: 500px;
+  margin: 0 auto;
+  background: #41a00050;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+
+.header-hero__embedded iframe {
+  width: 600px;
+  height: 330px;
+}
+
+@media screen and (max-width: 600px) {
+  .header-hero__embedded iframe {
+    width: 500px;
+    height: 280px;
+  }
+
+  .header-hero__title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-hero__embedded iframe {
+    width: 400px;
+    height: 220px;
+  }
+
+  .header-hero__title {
+    font-size: 24px;
+  }
+
+  .header-hero__placeholder {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-hero__embedded iframe {
+    width: 320px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header-hero__embedded iframe {
+    width: 280px;
+    height: 200px;
+  }
+
+  .header-hero__title {
+    font-size: 22px;
+  }
+
+  .header-hero__placeholder {
+    width: 280px;
+  }
+}
+
+.header-hero__placeholder img {
+  width: 500px;
+}
+
+.header-hero__end {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header-c2a__btn {
+  display: inline-block;
+  width: 240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header-hero__embedded {
+  display: none;
 }
 
 /*******************************
@@ -221,7 +418,8 @@ Template: malina
   border-bottom: 3.5px solid #41a000;
 }
 
-.footer-c2a__btn {
+.footer-c2a__btn,
+.header-c2a__btn {
   display: block;
   min-width: 180px;
   flex-shrink: 0;
@@ -237,12 +435,15 @@ Template: malina
   background: linear-gradient(to top left, #41a000, #72c94a);
 }
 
-.footer-c2a__btn:hover {
+.footer-c2a__btn:hover,
+.header-c2a__btn:hover {
   color: #f9f9f9;
 }
 
 .footer-c2a__btn:focus,
-.footer-c2a__btn:active {
+.footer-c2a__btn:active,
+.header-c2a__btn:focus,
+.header-c2a__btn:active {
   outline: none !important;
   box-shadow: 3px 3px 12px #33627805;
 }

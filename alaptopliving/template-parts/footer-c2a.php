@@ -4,7 +4,7 @@
   </div>
   <div class="footer-c2a__details">
     <h3>Want to start your own business? <span>Get Started</span></h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt distinctio et delectus eius neque! Obcaecati officiis odio quibusdam ipsam, dignissimos quaerat recusandae et aliquid, dolor consectetur ducimus veniam voluptate enim.</p>
+    <p>We are writing a complete guideline (a step by step process) for how you can start your own business right from your laptop from the scratch. Follow the blog series to get started with your journey of becoming a self-independent and living a financial-freedom life.</p>
   </div>
   <div class="footer-c2a__end">
     <a class="footer-c2a__btn" href="/category/internet-marketing">Learn More</a>

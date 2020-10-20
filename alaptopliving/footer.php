@@ -25,7 +25,7 @@
 							<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('footer-widgets') ); ?>
 					</div>
 				<?php } ?>
-			</div>	
+			</div>
 							
 			<div class="span12">
 				<?php if( get_theme_mod('malina_footer_socials', true ) && function_exists('malina_get_footer_social_links') ) { echo malina_get_footer_social_links(); } ?>
